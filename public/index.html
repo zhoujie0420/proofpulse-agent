@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ProofPulse Agent</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">CROO Agent Hackathon MVP</p>
+          <h1>ProofPulse</h1>
+          <p class="lede">A paid, callable research agent that lets humans or other agents buy an evidence check before they publish claims, route funds, or commit to a bounty.</p>
+          <div class="actions">
+            <button id="runDemo">Run agent</button>
+            <button id="loadCard" class="secondary">Agent card</button>
+            <button id="loadManifest" class="secondary">A2A manifest</button>
+          </div>
+        </div>
+        <aside class="status" aria-label="Agent status">
+          <span>CAP + A2A demo flow</span>
+          <strong>$0.25 USDC</strong>
+          <small>Quote, intent, settlement, report</small>
+        </aside>
+      </section>
+
+      <section class="workspace">
+        <form id="agentForm">
+          <label>
+            Claim
+            <textarea name="claim" rows="5">CROO Agent Hackathon is a good target because it is open until 2026/07/12, has a small current BUIDL pool, and rewards paid callable agents with CAP integration.</textarea>
+          </label>
+          <label>
+            Context
+            <textarea name="context" rows="8">Source: https://dorahacks.io/hackathon/croo-hackathon. Requirements include open-source repo, max 5-minute demo video, CAP integration, Agent Store listing, and DoraHacks BUIDL submission. Tracks include Research & Intelligence Agents and Data & Verification Agents. ProofPulse returns a machine-readable policy recommendation so another agent can decide whether to continue, review, or block an action.</textarea>
+          </label>
+          <div class="form-row">
+            <label>
+              Urgency
+              <select name="urgency">
+                <option value="normal">Normal</option>
+                <option value="fast">Fast</option>
+              </select>
+            </label>
+            <label>
+              Buyer wallet
+              <input name="wallet" value="demo-wallet.eth">
+            </label>
+            <label>
+              Buyer agent
+              <input name="buyer_agent" value="bounty-triage.agent">
+            </label>
+          </div>
+        </form>
+
+        <section class="panel" aria-live="polite">
+          <div class="panel-head">
+            <div>
+              <p class="eyebrow">Live response</p>
+              <h2 id="verdict">Ready</h2>
+            </div>
+            <span id="confidence" class="meter">0</span>
+          </div>
+          <pre id="output">Click “Run agent” to request a quote, simulate settlement, and receive a verification report.</pre>
+        </section>
+      </section>
+
+      <section class="lanes">
+        <article>
+          <h2>Track fit</h2>
+          <p>Research & Intelligence plus Data & Verification. ProofPulse turns uncertainty into a purchasable check that other agents can use before high-impact actions.</p>
+        </article>
+        <article>
+          <h2>CAP story</h2>
+          <p>Every job has a quote, payment intent, receipt hash, structured SLA, and machine-readable output. The settlement layer is mocked for judging and ready to swap to CROO production keys.</p>
+        </article>
+        <article>
+          <h2>Demo path</h2>
+          <p>Show a buyer asking for verification, ProofPulse pricing the job, returning evidence, and another agent using the policy recommendation as an input dependency.</p>
+        </article>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
