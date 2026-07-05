@@ -1,0 +1,20 @@
+{
+  "name": "proofpulse-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CAP-ready research and verification agent for the CROO Agent Hackathon.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "demo": "node server.js",
+    "test": "node --check server.js && node --check public/app.js && node scripts/smoke-test.mjs"
+  },
+  "keywords": [
+    "croo",
+    "agent",
+    "cap",
+    "research",
+    "verification"
+  ],
+  "license": "MIT"
+}
